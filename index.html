@@ -49,11 +49,11 @@
       var isClose=true;
         const stopwords = ["of", "the", "a", "an", "any", "is", "can", "who", "what", "why", "whom"];
         var editor = "sorts\n" +
-             "    #people = {tommy, alex, john, daniel, sarah, peter, lino}.\n" +
-            "    #diseasename = { tb , malaria , diabetes , HeartAttack , corona }.\n" +
-            "    #symptom   =  {bodypains, weightloss, headache , hunger , chestpain , cough, fever,cold, blurry vision  }.\n " +
+            "    #people = {tommy, alex, john, daniel, sarah, peter, lino}.\n" +
+            "    #diseasename = { tb , malaria , diabetes , heartAttack , corona}.\n" +
+            "    #symptom   =  {bodypains, weightloss, headache , hunger , chestpain , cough, fever,cold, blurryvision}.\n " +
             "    #rcytime = {24hours, 6months , 2weeks , 3months, 14days  }.\n " +
-            "    #tablets     =  {TBtablet, Mtablet , dtablet , htablet , ctablet }.\n" +
+            "    #tablets     =  {TBtablet, Mtablet , dtablet , htablet , ctablet}.\n" +
             "predicates\n" +
             "    cure(#diseasename, #tablets).\n" +
             "    symptoms(#symptom, #diseasename).\n" +
@@ -65,11 +65,12 @@
             "    cure(HeartAttack, htablet)..\n" +
             "    symptoms(bodypains, malaria).\n" +
             "    symptoms(weightloss, tb).\n" +
-            "    symptoms(chestpain, HeartAttack).\n" +
+            "    symptoms(chestpain, heartAttack).\n" +
             "    recoverytime(tb, 24hours).\n" +
             "    recoverytime(malaria, 6months).\n" +
             "    recoverytime(diabetes, 2weeks).\n" +
-            "    recoverytime(HeartAttack, 3months).";
+            "    recoverytime(heartAttack, 3months).";
+
         // sorts
         var contstring = editor.split("sorts\n")[1].split("predicates\n");
         var sortstring = contstring[0].split('.');
