@@ -55,21 +55,21 @@
             "    #rcytime =  {ahours, bmonths , cweeks , dmonths, edays  }.\n " +
             "    #tablets     = {tbtablet, mtablet , dtablet , htablet , ctablet }.\n" +
             "predicates\n" +
-            "    medicine(#diseasename, #tablets).\n" +
+            "    medicine(#tablets, #diseasename).\n" +
             "    symptoms(#symptom, #diseasename).\n" +
-            "    recoverytime(#diseasename,#rcytime).\n" +
+            "    recoverytime(#rcytime, #diseasename).\n" +
             "rules\n" +
-            "    medicine(tb, tbtablet).\n" +
-            "    medicine(malaria, mtablet).\n" +
-            "    medicine(diabetes, dtablet).\n" +
-            "    medicine(heartattack, htablet).\n" +
+            "    medicine(tbtablet, tb).\n" +
+            "    medicine(mtablet, malaria ).\n" +
+            "    medicine(dtablet, diabetes ).\n" +
+            "    medicine(htablet, heartattack ).\n" +
             "    symptoms(bodypains, malaria).\n" +
             "    symptoms(weightloss, tb).\n" +
             "    symptoms(chestpain, heartattack).\n" +
-            "    recoverytime(tb, ahours).\n" +
-            "    recoverytime(malaria, bmonths).\n" +
-            "    recoverytime(diabetes, cweeks).\n" +
-            "    recoverytime(heartattack, dmonths).";
+            "    recoverytime(ahours, tb).\n" +
+            "    recoverytime(bmonths, malaria).\n" +
+            "    recoverytime(cweeks, diabetes).\n" +
+            "    recoverytime(dmonths, heartattack).";
         // sorts
         var contstring = editor.split("sorts\n")[1].split("predicates\n");
         var sortstring = contstring[0].split('.');
