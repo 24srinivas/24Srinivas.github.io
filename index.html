@@ -55,14 +55,14 @@
             "    #rcytime =  {ahours, bmonths , cweeks , dmonths, edays  }.\n " +
             "    #tablets     = {tbtablet, mtablet , dtablet , htablet , ctablet }.\n" +
             "predicates\n" +
-            "    cure(#diseasename, #tablets).\n" +
+            "    medicine(#diseasename, #tablets).\n" +
             "    symptoms(#symptom, #diseasename).\n" +
             "    recoverytime(#diseasename,#rcytime).\n" +
             "rules\n" +
-            "    cure(tb, tbtablet).\n" +
-            "    cure(malaria, mtablet).\n" +
-            "    cure(diabetes, dtablet).\n" +
-            "    cure(heartattack, htablet).\n" +
+            "    medicine(tb, tbtablet).\n" +
+            "    medicine(malaria, mtablet).\n" +
+            "    medicine(diabetes, dtablet).\n" +
+            "    medicine(heartattack, htablet).\n" +
             "    symptoms(bodypains, malaria).\n" +
             "    symptoms(weightloss, tb).\n" +
             "    symptoms(chestpain, heartattack).\n" +
