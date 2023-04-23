@@ -211,9 +211,8 @@
           },
           success: function(response) {
             console.log(response);
-             var answer = response || 'Sorry, I could not find an answer.';
-             answer.substring(answer.indexOf(')') + 1, answer.indexOf(')')));
-             answerDiv.innerHTML = answer;
+             const answer = response || 'Sorry, I could not find an answer.';
+             answerDiv.innerHTML = answer.substring(answer.length - 8);
              answerBox.innerHTML = answer;
             
           },
