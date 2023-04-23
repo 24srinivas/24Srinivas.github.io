@@ -212,8 +212,9 @@
           success: function(response) {
             console.log(response);
              var answer = response || 'Sorry, I could not find an answer.';
-             answerDiv.innerHTML = answer.substring(answer.length - 8);
-             answerBox.innerHTML = answer;
+             var matches = answer.match(/X =\s(.+)/);
+             answerDiv.innerHTML = matches[1];
+             answerBox.innerHTML = matches[1];
             
           },
           error: function(xhr, status, error) {
