@@ -211,9 +211,11 @@
           },
           success: function(response) {
             console.log(response);
-             const answer = response || 'Sorry, I could not find an answer.';
+             var answer = response || 'Sorry, I could not find an answer.';
+             answer.substring(answer.indexOf(')') + 1, answer.indexOf(')')));
              answerDiv.innerHTML = answer;
              answerBox.innerHTML = answer;
+            
           },
           error: function(xhr, status, error) {
             console.log("error: " + error);
