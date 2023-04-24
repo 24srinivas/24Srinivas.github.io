@@ -57,24 +57,24 @@
             "    #people = {tommy, alex, john, daniel, sarah, peter, lino}.\n" +
             "    #diseasename = { tb , malaria , diabetes , heartattack , corona }.\n" +
             "    #symptom   =  {bodypains, weightloss, headache , hunger , chestpain , cough, fever,cold, blurry vision  }.\n " +
-            "    #rcytime =  {ahours, bmonths , cweeks , dmonths, edays  }.\n " +
-            "    #tablets     = {tbtablet, mtablet , dtablet , htablet , ctablet }.\n" +
+            "    #rcytime =  {4months, 2months , 2weeks , 3months }.\n " +
+            "    #tablets     = {Rifampin, Quinine , Canagliflozin , Aspirin , Dolo650 }.\n" +
             "predicates\n" +
             "    medicine(#tablets, #diseasename).\n" +
             "    symptoms(#symptom, #diseasename).\n" +
             "    recoverytime(#rcytime, #diseasename).\n" +
             "rules\n" +
-            "    medicine(tbtablet, tb).\n" +
-            "    medicine(mtablet, malaria ).\n" +
-            "    medicine(dtablet, diabetes ).\n" +
-            "    medicine(htablet, heartattack ).\n" +
+            "    medicine(Rifampin, tb).\n" +
+            "    medicine(Quinine, malaria ).\n" +
+            "    medicine(Canagliflozin, diabetes ).\n" +
+            "    medicine(Aspirin, heartattack ).\n" +
             "    symptoms(bodypains, malaria).\n" +
             "    symptoms(weightloss, tb).\n" +
             "    symptoms(chestpain, heartattack).\n" +
-            "    recoverytime(ahours, tb).\n" +
-            "    recoverytime(bmonths, malaria).\n" +
-            "    recoverytime(cweeks, diabetes).\n" +
-            "    recoverytime(dmonths, heartattack).";
+            "    recoverytime(4months, tb).\n" +
+            "    recoverytime(2months, malaria).\n" +
+            "    recoverytime(2weeks, diabetes).\n" +
+            "    recoverytime(3months, heartattack).";
         // sorts
         var contstring = editor.split("sorts\n")[1].split("predicates\n");
         var sortstring = contstring[0].split('.');
