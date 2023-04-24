@@ -57,7 +57,7 @@
             "    #people = {tommy, alex, john, daniel, sarah, peter, lino}.\n" +
             "    #diseasename = { tb , malaria , diabetes , heartattack , corona }.\n" +
             "    #symptom   =  {bodypains, weightloss, headache , hunger , chestpain , cough, fever,cold, blurry vision  }.\n " +
-            "    #rcytime =  {four months, two months , two weeks , three months , five months}.\n " +
+            "    #rcytime =  {fourmonths, twomonths , twoweeks , threemonths , fivemonths}.\n " +
             "    #tablets     = {rifampin, quinine , canagliflozin , aspirin , dolo }.\n" +
             "predicates\n" +
             "    medicine(#tablets, #diseasename).\n" +
@@ -71,10 +71,10 @@
             "    symptoms(bodypains, malaria).\n" +
             "    symptoms(weightloss, tb).\n" +
             "    symptoms(chestpain, heartattack).\n" +
-            "    recoverytime(four months, tb).\n" +
-            "    recoverytime(two months, malaria).\n" +
-            "    recoverytime(two weeks, diabetes).\n" +
-            "    recoverytime(three months, heartattack).";
+            "    recoverytime(fourmonths, tb).\n" +
+            "    recoverytime(twomonths, malaria).\n" +
+            "    recoverytime(twoweeks, diabetes).\n" +
+            "    recoverytime(threemonths, heartattack).";
         // sorts
         var contstring = editor.split("sorts\n")[1].split("predicates\n");
         var sortstring = contstring[0].split('.');
