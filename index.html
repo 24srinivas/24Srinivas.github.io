@@ -57,7 +57,7 @@
         var editor = "sorts\n" +
             "    #people = {tommy, alex, john, daniel, sarah, peter, lino}.\n" +
             "    #diseasename = { tb , malaria , diabetes , heartattack , corona }.\n" +
-            "    #symptom   =  {bodypains, weightloss, headache , shivering ,  hunger , chestpain , cough, fever,cold, blurryvision  }.\n " +
+            "    #symptom   =  {bodypains_and_shivering , weightloss, headache , shivering ,  hunger , chestpain , cough, fever,cold, blurryvision  }.\n " +
             "    #rcytime =  {fourmonths,twomonths,twoweeks,threemonths,fivemonths}.\n " +
             "    #tablets     = {rifampin, quinine , canagliflozin , aspirin , dolo }.\n" +
             "predicates\n" +
@@ -69,8 +69,7 @@
             "    medicine(quinine, malaria ).\n" +
             "    medicine(canagliflozin, diabetes ).\n" +
             "    medicine(aspirin, heartattack ).\n" +
-            "    symptoms(shivering, malaria).\n" +
-            "    symptoms(bodypains, malaria).\n" +
+            "    symptoms(bodypains_and_shivering, malaria).\n" +
             "    symptoms(weightloss, tb).\n" +
             "    symptoms(chestpain, heartattack).\n" +
             "    recoverytime(fourmonths, tb).\n" +
