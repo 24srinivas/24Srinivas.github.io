@@ -56,7 +56,7 @@
         var editor = "sorts\n" +
             "    #people = {tommy, alex, john, daniel, sarah, peter, lino}.\n" +
             "    #diseasename = { tb , malaria , diabetes , heartattack , corona }.\n" +
-            "    #symptom   =  {bodypains, weightloss, headache , hunger , chestpain , cough, fever,cold, blurryvision  }.\n " +
+            "    #symptom   =  {bodypains, weightloss, headache , shivering ,  hunger , chestpain , cough, fever,cold, blurryvision  }.\n " +
             "    #rcytime =  {fourmonths,twomonths,twoweeks,threemonths,fivemonths}.\n " +
             "    #tablets     = {rifampin, quinine , canagliflozin , aspirin , dolo }.\n" +
             "predicates\n" +
@@ -68,6 +68,7 @@
             "    medicine(quinine, malaria ).\n" +
             "    medicine(canagliflozin, diabetes ).\n" +
             "    medicine(aspirin, heartattack ).\n" +
+            "    symptoms(shivering, malaria).\n" +
             "    symptoms(bodypains, malaria).\n" +
             "    symptoms(weightloss, tb).\n" +
             "    symptoms(chestpain, heartattack).\n" +
@@ -211,10 +212,14 @@
           },
           success: function(response) {
             console.log(response);
+            answerDiv.innerHTML = " ";
+             answerBox.innerHTML = " ";
              var answer = response || 'Sorry, I could not find an answer.';
-             var matches = answer.match(/X =\s(.+)/);
-             answerDiv.innerHTML = "The answer to the above question is "+matches[1];
-             answerBox.innerHTML = "The answer to the above question is "+matches[1];
+             var matches = answer.match(/X =\s(.+)/) || answer.match(/yes/) || answer.match(/unknown/);
+            
+             answerDiv.innerHTML = "The answer to the above question is "+matches[1] || "The answer to the above question is "+matches[0] || response  ;
+             answerBox.innerHTML = "The answer to the above question is "+matches[1] || "The answer to the above question is "+matches[0] || response  ;
+             
             
           },
           error: function(xhr, status, error) {
