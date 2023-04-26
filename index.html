@@ -219,8 +219,8 @@
              var matches = answer.match(/X =\s(.+)/); 
              var match = answer.match(/yes/) || answer.match(/unknown/);
             
-             answerDiv.innerHTML = "The answer to the above question is "+matches[1] + "and" + response || "The answer to the above question is "+match[0] + "and" + response   ;
-             answerBox.innerHTML = "The answer to the above question is "+matches[1] + "and" + response || "The answer to the above question is "+match[0] + "and" +  response  ;
+             answerDiv.innerHTML = "The answer to the above question is "+matches[1]  + response ;
+             answerBox.innerHTML = "The answer to the above question is "+matches[1] +  response ;
              
             
           },
