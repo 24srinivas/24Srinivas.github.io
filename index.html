@@ -37,9 +37,10 @@
 
   
     <center>
-    
+      
+    <h1>Health Care Chatbot</h1>
     <h1>Ask a Question here </h1>
-    
+      
     <input type="text" id="text-input" placeholder="Type your question...">
     <button id="voice-input-btn"><i class="fa fa-microphone"></i></button><br>
     <button id="submit-btn">Submit</button>
@@ -215,10 +216,10 @@
             answerDiv.innerHTML = " ";
              answerBox.innerHTML = " ";
              var answer = response || 'Sorry, I could not find an answer.';
-             var matches = answer.match(/X =\s(.+)/) || answer.match(/yes/) || answer.match(/unknown/);
+             var matches = answer.match(/X =\s(.+)/) || answer.match(/yes/) ;
             
-             answerDiv.innerHTML = "The answer to the above question is "+matches[1] || "The answer to the above question is "+matches[0] || response  ;
-             answerBox.innerHTML = "The answer to the above question is "+matches[1] || "The answer to the above question is "+matches[0] || response  ;
+             answerDiv.innerHTML = "The answer to the above question is "+matches[1] + "and" + response || "The answer to the above question is "+matches[0] + "and" + response   ;
+             answerBox.innerHTML = "The answer to the above question is "+matches[1] + "and" + response || "The answer to the above question is "+matches[0] + "and" +  response  ;
              
             
           },
